@@ -1,26 +1,55 @@
 using UnityEngine;
+using System.Collections;
 
 public class WaveSpawner : MonoBehaviour
 {
-    public Transform enemyPrefab;
+    public enum SpawnState { SPAWNING, WAITING, COUNTING };
+
+    [System.Serializable]
+    public class Wave
+    {
+        public string name;
+        public Transform enemy;
+        public int count;
+        public float rate;
+    }
+    
+    public Wave[] waves;
+    private int nextWave = 0;
 
     public float timeBetweenWaves = 5f;
     private float countdown = 2f;
+
+    public SpawnState state = SpawnState.COUNTING;
 
     void Update ()
     {
         if (countdown <= 0f)
         {
-            SpawnWave();
-            countdown = timeBetweenWaves;
+            if (state != SpawnState.SPAWNING)
+            {
+                StartCoroutine(SpawnWave(waves[nextWave]));
+            }
         }
-
-        countdown -= Time.deltaTime;
+        else
+        {
+            countdown -= Time.deltaTime;
+        }
     }
 
-    void SpawnWave()
+    IEnumerator SpawnWave(Wave _wave)
     {
-        Debug.Log("Wave Incoming!");
+        state = SpawnState.SPAWNING;
+
+        // Spawn
+        for (int i = 0; i < _wave.count; i++)
+        {
+            
+        }
+
+        state = SpawnState.WAITING;
+        
+        yield break;
     }
 
 }
