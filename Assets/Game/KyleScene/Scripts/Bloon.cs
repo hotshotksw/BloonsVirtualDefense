@@ -3,7 +3,8 @@ using UnityEngine;
 public class Bloon : MonoBehaviour
 {
     public float speed = 10f;
-
+    public int hitPoints = 1;
+    public int reward = 1;
     private Transform target;
     private int waypointIndex = 0;
 
