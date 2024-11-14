@@ -31,7 +31,10 @@ public class DartMonkey : MonkeyBase
 
 	protected override void Update()
 	{
-		base.Update();
+		if ((Mathf.Abs(enemy.transform.position.x) + Mathf.Abs(enemy.transform.position.z)) - (Mathf.Abs(transform.position.x) + Mathf.Abs(transform.position.z)) < rangeToUse * 1.5f)
+		{
+			base.Update();
+		}
 		Upgrade();
 		if (hit.collider != null)
 		{
@@ -63,7 +66,7 @@ public class DartMonkey : MonkeyBase
 	{
 		if (fasterFiring && !doneFR)
 		{
-			ogFireRate = ogFireRate * 0.6f;
+			ogFireRate = ogFireRate * 0.65f;
 			doneFR = true;
 		}
 

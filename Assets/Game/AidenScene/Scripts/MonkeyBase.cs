@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MonkeyBase : MonoBehaviour
 {
 	protected RaycastHit hit;
-	private GameObject enemy;
+	protected GameObject enemy;
 
 	protected virtual void Update()
 	{
