@@ -240,6 +240,7 @@ GameObject:
   - component: {fileID: 824670512}
   - component: {fileID: 824670511}
   - component: {fileID: 824670510}
+  - component: {fileID: 824670514}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Enemy
@@ -262,7 +263,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -336,6 +337,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &824670514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824670509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aabf02df1c9222458125381cc82eaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alreadyHit: 0
 --- !u!1 &871757354
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +567,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433517314}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0.01981961, z: -0, w: 0.9998036}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -561,7 +575,7 @@ Transform:
   - {fileID: 2119318627}
   - {fileID: 1474987319}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -2.271, z: 0}
 --- !u!114 &1433517318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -571,14 +585,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1433517314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ff1b01b6a840ef4eb50665764e49d0a, type: 3}
+  m_Script: {fileID: 11500000, guid: 25b0d36fa89dcd04eb39094ec64967e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 4059170835291906212, guid: e05d75a79335d7645bfd5061628542ff, type: 3}
   projectileInstSpot: {fileID: 1474987319}
   fireRate: 1.5
-  projectileSpeed: 350
+  projectileSpeed: 300
   range: 2.5
+  fasterFiring: 0
+  largerRange: 0
+  tripleDart: 0
+  crossBow: 0
 --- !u!1 &1474987318
 GameObject:
   m_ObjectHideFlags: 0

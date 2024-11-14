@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 7867707161049657599}
   - component: {fileID: 4912399427304665318}
   - component: {fileID: 2000517510885372188}
-  - component: {fileID: 1550883611564547771}
+  - component: {fileID: 8996468287618551877}
   m_Layer: 0
   m_Name: Dart
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +137,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1550883611564547771
+--- !u!114 &8996468287618551877
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,9 +146,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4059170835291906212}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c6e02b68a4733b4e86962bf017c5276, type: 3}
+  m_Script: {fileID: 11500000, guid: d2171fc94a49b044a981d55a10de1f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  pierce: 1
-  lifespan: 1
+  Damage: 1
+  Lifespan: 1.25
+  Pierce: 1
+  crossbow: 0
