@@ -20,7 +20,7 @@ public class ProjectileBase : MonoBehaviour
 		{
 			if (!other.GetComponent<Bloon>().alreadyHit)
 			{
-				//other.GetComponent<Bloon>().ApplyDamage(damage);
+				other.GetComponent<Bloon>().ApplyDamage(damage);
 				pierce--;
 			}
 		}

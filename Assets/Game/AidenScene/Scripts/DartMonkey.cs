@@ -31,9 +31,12 @@ public class DartMonkey : MonkeyBase
 
 	protected override void Update()
 	{
-		if ((Mathf.Abs(enemy.transform.position.x) + Mathf.Abs(enemy.transform.position.z)) - (Mathf.Abs(transform.position.x) + Mathf.Abs(transform.position.z)) < rangeToUse * 1.5f)
+		if (enemy)
 		{
-			base.Update();
+			if ((Mathf.Abs(enemy.transform.position.x) + Mathf.Abs(enemy.transform.position.z)) - (Mathf.Abs(transform.position.x) + Mathf.Abs(transform.position.z)) < rangeToUse * 1.5f)
+			{
+				base.Update();
+			}
 		}
 		Upgrade();
 		if (hit.collider != null)

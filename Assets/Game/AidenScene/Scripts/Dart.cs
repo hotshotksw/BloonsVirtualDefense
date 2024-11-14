@@ -23,10 +23,11 @@ public class Dart : ProjectileBase
 
 	protected override void Update()
 	{
-		if (crossbow)
+		if (crossbow && !doneCB)
 		{
 			base.damage = 5;
 			base.pierce = 5;
+			doneCB = true;
 		}
 		base.Update();
 	}
