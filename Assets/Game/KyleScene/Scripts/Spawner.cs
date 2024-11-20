@@ -43,7 +43,7 @@ public class Spawner : MonoBehaviour
     {
         if (state == SpawnState.WAITING)
         {
-            if (Input.GetKeyDown(KeyCode.B))
+            if (!EnemyIsAlive())
             {
                 WaveCompleted();
             } else
