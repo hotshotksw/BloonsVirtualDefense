@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bloon : MonoBehaviour
+public class K_Bloon : MonoBehaviour
 {
     public float speed = 10f;
     public int hitPoints = 1;
@@ -15,6 +15,8 @@ public class Bloon : MonoBehaviour
 
     void Update ()
     {
+        if (hitPoints <= 0) Destroy(gameObject);
+        
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
@@ -36,4 +38,9 @@ public class Bloon : MonoBehaviour
         waypointIndex++;
             target = Waypoints.points[waypointIndex];
     }
+
+    public void ApplyDamage(int damage)
+	{
+		hitPoints -= damage;
+	}
 }
