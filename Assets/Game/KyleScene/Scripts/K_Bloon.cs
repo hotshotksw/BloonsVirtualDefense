@@ -8,6 +8,8 @@ public class K_Bloon : MonoBehaviour
     private Transform target;
     private int waypointIndex = 0;
 
+    public bool alreadyHit;
+
     void Start ()
     {
         target = Waypoints.points[0];
@@ -39,7 +41,16 @@ public class K_Bloon : MonoBehaviour
             target = Waypoints.points[waypointIndex];
     }
 
-    public void ApplyDamage(int damage)
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.CompareTag("Projectile")) alreadyHit = false;
+	}
+
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.CompareTag("Projectile")) alreadyHit = false;
+	}
+	public void ApplyDamage(int damage)
 	{
 		hitPoints -= damage;
 	}

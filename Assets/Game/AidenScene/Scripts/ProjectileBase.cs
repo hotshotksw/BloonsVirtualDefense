@@ -18,9 +18,9 @@ public class ProjectileBase : MonoBehaviour
 	{
 		if (other.CompareTag("Enemy") && pierce > 0 && other.GetComponent<Bloon>())
 		{
-			if (!other.GetComponent<Bloon>().alreadyHit)
+			if (!other.GetComponent<K_Bloon>().alreadyHit)
 			{
-				other.GetComponent<Bloon>().ApplyDamage(damage);
+				other.GetComponent<K_Bloon>().ApplyDamage(damage);
 				pierce--;
 			}
 		}
