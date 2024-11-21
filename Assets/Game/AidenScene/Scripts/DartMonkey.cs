@@ -26,18 +26,14 @@ public class DartMonkey : MonkeyBase
 	{
 		ogFireRate = fireRate;
 		rangeToUse = range;
+		base.rangeBase = rangeToUse;
+		GetComponent<SphereCollider>().radius = rangeBase;
 		projectileSpeedToUse = projectileSpeed;
 	}
 
 	protected override void Update()
 	{
-		if (enemy)
-		{
-			if ((Mathf.Abs(enemy.transform.position.x) + Mathf.Abs(enemy.transform.position.z)) - (Mathf.Abs(transform.position.x) + Mathf.Abs(transform.position.z)) < rangeToUse * 1.5f)
-			{
-				base.Update();
-			}
-		}
+		base.Update();
 		Upgrade();
 		if (hit.collider != null)
 		{
@@ -77,6 +73,7 @@ public class DartMonkey : MonkeyBase
 		{
 			projectileSpeedToUse = projectileSpeedToUse * 1.5f;
 			rangeToUse = rangeToUse * 1.35f;
+			base.rangeBase = rangeToUse;
 			ogFireRate = ogFireRate * 0.75f;
 			doneCB = true;
 		}
@@ -84,6 +81,7 @@ public class DartMonkey : MonkeyBase
 		if (largerRange && !doneLR)
 		{
 			rangeToUse = rangeToUse * 1.75f;
+			base.rangeBase = rangeToUse;
 			doneLR = true;
 		}
 	}
@@ -105,6 +103,25 @@ public class DartMonkey : MonkeyBase
 			if (crossBow) bullet.GetComponent<Dart>().crossbow = true;
 		}
 	}
+
+	//private void OnTriggerEnter(Collider other)
+	//{
+	//	if (other.CompareTag("Enemy"))
+	//	{
+	//		Debug.Log("Enemy");
+	//		enemy = other.gameObject;
+	//		enemies.Add(enemy);
+	//	}
+	//}
+
+	//private void OnTriggerExit(Collider other)
+	//{
+	//	if (other.CompareTag("Enemy"))
+	//	{
+	//		enemy = other.gameObject;
+	//		enemies.Remove(enemy);
+	//	}
+	//}
 
 	private void OnDrawGizmos()
 	{

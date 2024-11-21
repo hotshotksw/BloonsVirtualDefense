@@ -16,7 +16,7 @@ public class ProjectileBase : MonoBehaviour
 
 	protected virtual void OnTriggerEnter(Collider other)
 	{
-		if (other.CompareTag("Enemy") && pierce > 0 && other.GetComponent<Bloon>())
+		if (other.CompareTag("Enemy") && pierce > 0 && other.GetComponent<K_Bloon>())
 		{
 			if (!other.GetComponent<K_Bloon>().alreadyHit)
 			{
