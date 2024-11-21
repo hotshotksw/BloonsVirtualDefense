@@ -18,8 +18,6 @@ public class TowerPlacer : MonoBehaviour
                 }
             }
 
-            //print(hitInfo.collider.tag);
-
             if(Input.GetMouseButtonDown(0))
             {
                 currentMonke = null;
