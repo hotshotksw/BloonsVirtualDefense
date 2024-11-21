@@ -1,24 +1,31 @@
+using Unity.XR.OpenVR;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Readers;
+using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class TowerPlacer : MonoBehaviour
 {
-    [SerializeField] private Camera cam;
     private GameObject currentMonke;
+    public GameObject Controller;
+    public InputActionReference triggerInputActionReference;
 
     void Update()
     {
         if(currentMonke != null)
         {
-            Ray camray = cam.ScreenPointToRay(Input.mousePosition);
-            if(Physics.Raycast(camray, out RaycastHit hitInfo, 100f))
+            //Ray camray = cam.ScreenPointToRay(Input.mousePosition);
+            Debug.DrawRay(Controller.transform.position, Controller.transform.forward, Color.yellow);
+            if (Physics.Raycast(transform.position, transform.forward, out RaycastHit hitInfo, 10f))
             {
                 if (hitInfo.collider.tag == "Ground")
                 {
-                    currentMonke.transform.position = new Vector3(hitInfo.point.x, currentMonke.transform.position.y, hitInfo.point.z);
+                    currentMonke.transform.position = new Vector3(hitInfo.point.x, hitInfo.point.y, hitInfo.point.z);
                 }
             }
 
-            if(Input.GetMouseButtonDown(0))
+            if(triggerInputActionReference.action.ReadValue<float>() != 0)
             {
                 currentMonke = null;
             }
