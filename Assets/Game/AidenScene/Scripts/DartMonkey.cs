@@ -7,7 +7,7 @@ public class DartMonkey : MonkeyBase
 	[SerializeField] float fireRate;
 	private float ogFireRate;
 	[SerializeField] float projectileSpeed;
-	private float projectileSpeedToUse;
+	public float projectileSpeedToUse;
 	[SerializeField] float range;
 	private float rangeToUse;
 
