@@ -27,7 +27,6 @@ public class DartMonkey : MonkeyBase
 		ogFireRate = fireRate;
 		rangeToUse = range;
 		base.rangeBase = rangeToUse;
-		GetComponent<SphereCollider>().radius = rangeBase;
 		projectileSpeedToUse = projectileSpeed;
 	}
 

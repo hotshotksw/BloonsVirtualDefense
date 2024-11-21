@@ -20,7 +20,8 @@ public class MonkeyBase : MonoBehaviour
 			{
 				enemies.RemoveAt(i);
 			}
-			else if ((Mathf.Abs(enemies.ElementAt(i).transform.position.x) + Mathf.Abs(enemies.ElementAt(i).transform.position.z)) - (Mathf.Abs(transform.position.x) + Mathf.Abs(transform.position.z)) < rangeBase)
+			else if (Mathf.Abs(transform.position.x - enemies.ElementAt(i).transform.position.x) + 
+				Mathf.Abs(transform.position.z - enemies.ElementAt(i).transform.position.z) < rangeBase * 1.5f)
 			{
 				transform.LookAt(enemies.ElementAt(i).transform);
 				break;
