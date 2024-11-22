@@ -28,6 +28,7 @@ public class TowerPlacer : MonoBehaviour
 
             if(triggerInputActionReference.action.ReadValue<float>() != 0)
             {
+                GameObject.Find("GameManager").GetComponent<Player>().RemoveBananas(100);
                 currentMonke = null;
             }
         }
@@ -35,7 +36,10 @@ public class TowerPlacer : MonoBehaviour
 
     public void SetTowerToPlace(GameObject tower)
     {
-        currentMonke = Instantiate(tower, Vector3.zero, Quaternion.identity);
+        if (GameObject.Find("GameManager").GetComponent<Player>().Bananas >= 100)
+        {
+            currentMonke = Instantiate(tower, Vector3.zero, Quaternion.identity);
+        }
     }
 }
 
