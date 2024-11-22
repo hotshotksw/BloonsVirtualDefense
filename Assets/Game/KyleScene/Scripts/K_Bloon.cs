@@ -17,8 +17,13 @@ public class K_Bloon : MonoBehaviour
 
     void Update ()
     {
-        if (hitPoints <= 0) Destroy(gameObject);
         
+        
+        if (hitPoints <= 0) 
+        {
+            GameObject.Find("GameManager").GetComponent<Player>().AddBananas(rewardPoints);
+            Destroy(gameObject);
+        }
         Vector3 dir = target.position - transform.position;
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
