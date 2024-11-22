@@ -3459,7 +3459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1154390456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4949,6 +4949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882183787}
   - component: {fileID: 1882183786}
+  - component: {fileID: 1882183788}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5007,6 +5008,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1882183788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882183785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 959195318d8b61048a4ba63f7e6f3e7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Moneytext: {fileID: 1992819467}
 --- !u!1001 &1888279330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5467,6 +5481,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980139400}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1992819467 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8427992188570753934, guid: c26ca6f5088ffe14ea83abfa4e78bde7, type: 3}
+  m_PrefabInstance: {fileID: 8149104429082837784}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &2068384404 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3611852704327024683, guid: b15f4ec8ace306d41b9b23ae90fda61f, type: 3}
@@ -5736,7 +5761,7 @@ PrefabInstance:
     - target: {fileID: 5652645438012783083, guid: c26ca6f5088ffe14ea83abfa4e78bde7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 9011261354193140746, guid: 53ffd7d7ed6dab44dade0ac86eb3f185, type: 3}
+      objectReference: {fileID: 4499574150668724392, guid: d059beddb83924045939c26aecc03c57, type: 3}
     - target: {fileID: 5652645438012783083, guid: c26ca6f5088ffe14ea83abfa4e78bde7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
