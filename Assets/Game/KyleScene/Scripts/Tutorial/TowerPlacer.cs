@@ -21,7 +21,7 @@ public class TowerPlacer : MonoBehaviour
             {
                 if (hitInfo.collider.tag == "Ground")
                 {
-                    currentMonke.transform.position = new Vector3(hitInfo.point.x, hitInfo.point.y, hitInfo.point.z);
+                    currentMonke.transform.position = new Vector3(hitInfo.point.x, hitInfo.point.y+1.25f, hitInfo.point.z);
                 }
             }
 
