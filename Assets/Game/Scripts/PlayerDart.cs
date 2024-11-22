@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Dart : MonoBehaviour
+public class PlayerDart : MonoBehaviour
 {
     public bool thrown = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
