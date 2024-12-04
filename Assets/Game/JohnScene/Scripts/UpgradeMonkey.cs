@@ -29,6 +29,7 @@ public class UpgradeMonkey : MonoBehaviour
         if (upgradeCount > 4) 
         {
             monkeyUpgradeButtonText.text = "Fully Upgraded!";
+            monkeyUpgradeButtonText.fontSize = 18;
             
         }
     }

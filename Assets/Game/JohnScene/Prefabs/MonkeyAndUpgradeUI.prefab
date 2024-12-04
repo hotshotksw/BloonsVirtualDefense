@@ -45,6 +45,10 @@ PrefabInstance:
       propertyPath: monkey
       value: 
       objectReference: {fileID: 2358859731256873517}
+    - target: {fileID: 4323498306214642079, guid: 9aac032196a634940bc317b9f4b5e005, type: 3}
+      propertyPath: monkeyUpgradeButtonText
+      value: 
+      objectReference: {fileID: 5946637500072916761}
     - target: {fileID: 6449477857423072335, guid: 9aac032196a634940bc317b9f4b5e005, type: 3}
       propertyPath: m_Name
       value: UpgradeUI
@@ -138,6 +142,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9aac032196a634940bc317b9f4b5e005, type: 3}
+--- !u!114 &5946637500072916761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5503948933309340737, guid: 9aac032196a634940bc317b9f4b5e005, type: 3}
+  m_PrefabInstance: {fileID: 2226826779762879320}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7021350193641298008 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9193992968444048128, guid: 9aac032196a634940bc317b9f4b5e005, type: 3}
