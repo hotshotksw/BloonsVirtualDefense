@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class DartMonkey : MonkeyBase
 {
+
 	[SerializeField] GameObject projectilePrefab;
 	[SerializeField] Transform projectileInstSpot;
 	[SerializeField] float fireRate;
@@ -12,11 +13,11 @@ public class DartMonkey : MonkeyBase
 	private float rangeToUse;
 
 	// these will be private later, not now, just for testing
-	[SerializeField] bool fasterFiring;
+	[SerializeField] public bool fasterFiring;
 	private bool doneFR;
-	[SerializeField] bool largerRange;
+	[SerializeField] public bool largerRange;
 	private bool doneLR;
-	[SerializeField] bool tripleDart;
+	[SerializeField] public bool tripleDart;
 	[SerializeField] public bool crossBow;
 	private bool doneCB;
 

@@ -8,8 +8,10 @@ using UnityEngine.SceneManagement;
 public class MonkeyBase : MonoBehaviour
 {
 	protected RaycastHit hit;
-	//protected GameObject enemy;
-	public List<GameObject> enemies = new List<GameObject>();
+    [SerializeField] public string monkeyName;
+    [SerializeField] public Sprite icon;
+    //protected GameObject enemy;
+    public List<GameObject> enemies = new List<GameObject>();
 	[NonSerialized] protected float rangeBase;
 
 	protected virtual void Update()

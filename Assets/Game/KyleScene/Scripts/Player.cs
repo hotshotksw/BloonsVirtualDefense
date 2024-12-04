@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private int bananas = 100;
+    [SerializeField] private int bananas = 100;
     [SerializeField] TMP_Text Moneytext;
     public int Bananas
     {
