@@ -150,6 +150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
-  Lifespan: 1.25
+  Lifespan: 1
   Pierce: 1
   crossbow: 0

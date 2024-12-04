@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 1
-  Lifespan: 1.5
+  Lifespan: 1
   Pierce: 1
   laserBlasts: 0
   plasmaVision: 0
