@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
 {
     
     [SerializeField] private int bananas = 100;
-    private int health = 100;
+    [SerializeField] private int health = 100;
     [SerializeField] TMP_Text Moneytext;
     [SerializeField] TMP_Text Healthtext;
     public int Bananas
@@ -31,5 +31,11 @@ public class Player : MonoBehaviour
         {
             bananas = 0;
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        print(health);
     }
 }
