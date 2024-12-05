@@ -10,7 +10,7 @@ public class MonkeyBase : MonoBehaviour
 	protected RaycastHit hit;
     [SerializeField] public string monkeyName;
     [SerializeField] public Sprite icon;
-    //protected GameObject enemy;
+    public GameObject enemy;
     public List<GameObject> enemies = new List<GameObject>();
 	[NonSerialized] protected float rangeBase;
 
@@ -25,6 +25,7 @@ public class MonkeyBase : MonoBehaviour
 			else if (Mathf.Abs(transform.position.x - enemies.ElementAt(i).transform.position.x) + 
 				Mathf.Abs(transform.position.z - enemies.ElementAt(i).transform.position.z) < rangeBase * 1.5f)
 			{
+				enemy = enemies.ElementAt(i);
 				transform.LookAt(enemies.ElementAt(i).transform);
 				break;
 			}

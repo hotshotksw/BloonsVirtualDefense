@@ -3634,7 +3634,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959195318d8b61048a4ba63f7e6f3e7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bananas: 100
   Moneytext: {fileID: 0}
+  Healthtext: {fileID: 0}
 --- !u!4 &1272436495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3611852704327024683, guid: b15f4ec8ace306d41b9b23ae90fda61f, type: 3}
@@ -5516,11 +5518,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25b0d36fa89dcd04eb39094ec64967e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monkeyName: 
+  icon: {fileID: 0}
+  enemy: {fileID: 0}
   enemies: []
   projectilePrefab: {fileID: 4059170835291906212, guid: e05d75a79335d7645bfd5061628542ff, type: 3}
   projectileInstSpot: {fileID: 334574132}
   fireRate: 1.5
   projectileSpeed: 5000
+  projectileSpeedToUse: 0
   range: 6.5
   fasterFiring: 0
   largerRange: 0
@@ -5588,7 +5594,7 @@ Transform:
   m_GameObject: {fileID: 1897969146}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.01981961, z: -0, w: 0.9998036}
-  m_LocalPosition: {x: 20, y: 1, z: 20}
+  m_LocalPosition: {x: 16.14, y: 1, z: 17.21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
