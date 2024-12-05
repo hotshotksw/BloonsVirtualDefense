@@ -18,10 +18,14 @@ MonoBehaviour:
   m_PlatformId: b9b35072a6f44c2e863f17467ea3dc13
   m_PlatformBuildProfile:
     rid: 8862564180572504065
-  m_OverrideGlobalSceneList: 0
+  m_OverrideGlobalSceneList: 1
   m_Scenes:
-  - m_enabled: 1
+  - m_enabled: 0
     m_path: Assets/Scenes/SampleScene.unity
+  - m_enabled: 1
+    m_path: Assets/Game/JohnScene/Intro.unity
+  - m_enabled: 1
+    m_path: Assets/Game/JohnScene/main.unity
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
     m_Settings:
