@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 1140059666279142175}
   - component: {fileID: 7075440254243615770}
   m_Layer: 0
-  m_Name: SuperMonkey
+  m_Name: SUPERMONKEYTOWER
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
