@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     [SerializeField] private int health = 100;
     [SerializeField] TMP_Text Moneytext;
     [SerializeField] TMP_Text Healthtext;
+    [SerializeField] GameObject GameOverUI;
+    [SerializeField] GameObject HUDUI;
+    [SerializeField] GameObject ShopUI;
     public int Bananas
     {
         get { return bananas; }
@@ -37,5 +40,11 @@ public class Player : MonoBehaviour
     {
         health -= damage;
         print(health);
+        if (health <= 0)
+        { 
+            GameOverUI.SetActive(true);
+            HUDUI.SetActive(false);
+            ShopUI.SetActive(false);
+        }
     }
 }
