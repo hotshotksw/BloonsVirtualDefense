@@ -21,6 +21,7 @@ public class Dart : ProjectileBase
 		base.OnTriggerEnter(other);
 	}
 
+
 	protected override void Update()
 	{
 		if (crossbow && !doneCB)

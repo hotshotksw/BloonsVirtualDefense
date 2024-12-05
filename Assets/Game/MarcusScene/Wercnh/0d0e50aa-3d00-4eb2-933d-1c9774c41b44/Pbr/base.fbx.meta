@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: cf6ceafaa039b3b498e2e8050e2674f2
+guid: a7d16dd4422aeb6439b7f89f2d2532da
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: CombinationsDiffuse
-    second: {fileID: 2800000, guid: 8da46af6ecfd602409e7bb7efc41531a, type: 3}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
