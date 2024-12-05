@@ -4,6 +4,7 @@ public class K_Bloon : MonoBehaviour
 {
     public float speed = 10f;
     public int hitPoints = 1;
+    public int damage;
     public int rewardPoints = 1;
     private Transform target;
     private int waypointIndex = 0;
@@ -13,6 +14,7 @@ public class K_Bloon : MonoBehaviour
     void Start ()
     {
         target = Waypoints.points[0];
+        damage = hitPoints;
     }
 
     void Update ()

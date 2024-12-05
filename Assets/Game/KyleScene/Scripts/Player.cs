@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private int bananas = 100;
+    
+    [SerializeField] private int bananas = 100;
+    [SerializeField] private int health = 100;
     [SerializeField] TMP_Text Moneytext;
+    [SerializeField] TMP_Text Healthtext;
     public int Bananas
     {
         get { return bananas; }
@@ -12,6 +15,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         Moneytext.text = "$" + bananas;
+        Healthtext.text = health+"";
     }
     public void AddBananas(int amount)
     {
@@ -27,5 +31,11 @@ public class Player : MonoBehaviour
         {
             bananas = 0;
         }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        print(health);
     }
 }

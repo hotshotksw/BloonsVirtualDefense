@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class DartMonkey : MonkeyBase
+public class SuperMonkey : MonkeyBase
 {
-
 	[SerializeField] GameObject projectilePrefab;
 	[SerializeField] Transform projectileInstSpot;
 	[SerializeField] float fireRate;
@@ -13,13 +12,14 @@ public class DartMonkey : MonkeyBase
 	private float rangeToUse;
 
 	// these will be private later, not now, just for testing
-	[SerializeField] public bool fasterFiring;
-	private bool doneFR;
 	[SerializeField] public bool largerRange;
 	private bool doneLR;
-	[SerializeField] public bool tripleDart;
-	[SerializeField] public bool crossBow;
-	private bool doneCB;
+	[SerializeField] public bool laserVision;
+	private bool doneLV;
+	[SerializeField] public bool plasmaBlasts;
+	private bool donePB;
+	[SerializeField] public bool sunGod;
+	private bool doneSG;
 
 	private GameObject bullet;
 
@@ -63,26 +63,32 @@ public class DartMonkey : MonkeyBase
 
 	private void Upgrade()
 	{
-		if (fasterFiring && !doneFR)
-		{
-			ogFireRate = ogFireRate * 0.65f;
-			doneFR = true;
-		}
-
-		if (crossBow && !doneCB)
-		{
-			projectileSpeedToUse = projectileSpeedToUse * 1.5f;
-			rangeToUse = rangeToUse * 1.35f;
-			base.rangeBase = rangeToUse;
-			ogFireRate = ogFireRate * 0.75f;
-			doneCB = true;
-		}
-
 		if (largerRange && !doneLR)
 		{
 			rangeToUse = rangeToUse * 1.75f;
 			base.rangeBase = rangeToUse;
 			doneLR = true;
+		}
+
+		if (laserVision && !doneLV)
+		{
+			ogFireRate = ogFireRate * 0.75f;
+			doneLV = true;
+		}
+
+		if (plasmaBlasts && !donePB)
+		{
+			ogFireRate = ogFireRate * 0.75f;
+			donePB = true;
+		}
+
+		if (sunGod && !doneSG)
+		{
+			projectileSpeedToUse = projectileSpeedToUse * 1.5f;
+			rangeToUse = rangeToUse * 1.75f;
+			base.rangeBase = rangeToUse;
+			ogFireRate = ogFireRate * 0.5f;
+			doneSG = true;
 		}
 	}
 
@@ -90,17 +96,19 @@ public class DartMonkey : MonkeyBase
 	{
 		bullet = Instantiate(projectilePrefab, projectileInstSpot.position, projectileInstSpot.rotation);
 		bullet.GetComponent<Rigidbody>().AddForce(transform.forward * projectileSpeedToUse);
-		if (crossBow) bullet.GetComponent<Dart>().crossbow = true;
-		if (tripleDart)
+		if (laserVision) bullet.GetComponent<SuperMonkeyDart>().laserBlasts = true;
+		if (plasmaBlasts) bullet.GetComponent<SuperMonkeyDart>().plasmaVision = true;
+		if (sunGod) bullet.GetComponent<SuperMonkeyDart>().sunGod = true;
+		if (sunGod)
 		{
 			bullet = Instantiate(projectilePrefab, projectileInstSpot.position, projectileInstSpot.rotation);
-			bullet.GetComponent<Transform>().eulerAngles = new Vector3(0, bullet.GetComponent<Transform>().eulerAngles.y + 15, 0);
+			bullet.GetComponent<Transform>().eulerAngles = new Vector3(0, bullet.GetComponent<Transform>().eulerAngles.y + 7.5f, 0);
 			bullet.GetComponent<Rigidbody>().AddForce(bullet.GetComponent<Transform>().forward * projectileSpeedToUse);
-			if (crossBow) bullet.GetComponent<Dart>().crossbow = true;
+			if (sunGod) bullet.GetComponent<SuperMonkeyDart>().sunGod = true;
 			bullet = Instantiate(projectilePrefab, projectileInstSpot.position, projectileInstSpot.rotation);
-			bullet.GetComponent<Transform>().eulerAngles = new Vector3(0, bullet.GetComponent<Transform>().eulerAngles.y - 15, 0);
+			bullet.GetComponent<Transform>().eulerAngles = new Vector3(0, bullet.GetComponent<Transform>().eulerAngles.y - 7.5f, 0);
 			bullet.GetComponent<Rigidbody>().AddForce(bullet.GetComponent<Transform>().forward * projectileSpeedToUse);
-			if (crossBow) bullet.GetComponent<Dart>().crossbow = true;
+			if (sunGod) bullet.GetComponent<SuperMonkeyDart>().sunGod = true;
 		}
 	}
 
