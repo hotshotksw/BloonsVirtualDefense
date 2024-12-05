@@ -12,7 +12,7 @@ public class SuperMonkey : MonkeyBase
 	private float rangeToUse;
 
 	// these will be private later, not now, just for testing
-	[SerializeField] bool largerRange;
+	[SerializeField] public bool largerRange;
 	private bool doneLR;
 	[SerializeField] public bool laserVision;
 	private bool doneLV;
