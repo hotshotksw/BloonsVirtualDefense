@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 856c24a42f0aa004aa4be69dea52b144, type: 2}
     - target: {fileID: 919132149155446097, guid: a7d16dd4422aeb6439b7f89f2d2532da, type: 3}
       propertyPath: m_Name
-      value: base
+      value: Wrench
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -81,6 +81,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7d16dd4422aeb6439b7f89f2d2532da, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1864563831116682553}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7d16dd4422aeb6439b7f89f2d2532da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4274755085194666370}
   m_SourcePrefab: {fileID: 100100000, guid: a7d16dd4422aeb6439b7f89f2d2532da, type: 3}
 --- !u!1 &1302585403884129532 stripped
 GameObject:
@@ -176,7 +179,19 @@ MonoBehaviour:
       m_Calls: []
   m_FirstSelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4274755085194666370}
+        m_TargetAssemblyTypeName: WrenchUI, Assembly-CSharp
+        m_MethodName: InUse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_LastSelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -185,7 +200,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4274755085194666370}
+        m_TargetAssemblyTypeName: WrenchUI, Assembly-CSharp
+        m_MethodName: NotUsed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -257,3 +284,15 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 1
+--- !u!114 &4274755085194666370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302585403884129532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c05a0d26cc794a24ebdf5ed870f411e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
