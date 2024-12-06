@@ -9413,6 +9413,9 @@ MonoBehaviour:
   health: 100
   Moneytext: {fileID: 0}
   Healthtext: {fileID: 0}
+  GameOverUI: {fileID: 0}
+  HUDUI: {fileID: 0}
+  ShopUI: {fileID: 0}
 --- !u!4 &1272436495 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3611852704327024683, guid: b15f4ec8ace306d41b9b23ae90fda61f, type: 3}
