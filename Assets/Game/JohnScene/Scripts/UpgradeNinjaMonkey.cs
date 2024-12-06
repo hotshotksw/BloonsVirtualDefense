@@ -11,7 +11,7 @@ public class UpgradeNinjaMonkey : MonoBehaviour
     [SerializeField] TMP_Text monkeyUpgradePriceText;
     [SerializeField] TMP_Text monkeyUpgradeButtonText;
     [SerializeField] Image monkeyIconImage;
-    [SerializeField] int upgradePrice = 200;
+    [SerializeField] int upgradePrice = 400;
     [SerializeField] int upgradeCount = 0;
 
     private void Start()

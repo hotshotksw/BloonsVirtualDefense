@@ -724,7 +724,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &8827847518026613173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -903,8 +903,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UpgradeMonkey, Assembly-CSharp
+      - m_Target: {fileID: 6569868250016988411}
+        m_TargetAssemblyTypeName: UpgradeNinjaMonkey, Assembly-CSharp
         m_MethodName: OnUpgradePress
         m_Mode: 1
         m_Arguments:
