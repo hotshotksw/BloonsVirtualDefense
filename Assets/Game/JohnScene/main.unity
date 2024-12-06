@@ -587,6 +587,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2241078159092213025, guid: cf2c54a3d9edc0c45a59b92c96ad3958, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.98
+      objectReference: {fileID: 0}
     - target: {fileID: 5612903236962356866, guid: cf2c54a3d9edc0c45a59b92c96ad3958, type: 3}
       propertyPath: player
       value: 
@@ -1005,12 +1009,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - name: 
+  - name: 1
     enemies:
-    - enemy: {fileID: 2806846580664875793, guid: c417c0cc2e7f2904992e6c0bb5997831, type: 3}
-      count: 3
-    - enemy: {fileID: 2806846580664875793, guid: 2a859b7f96ef0db4ea2d0ee3b7862c6b, type: 3}
-      count: 2
     - enemy: {fileID: 2806846580664875793, guid: c417c0cc2e7f2904992e6c0bb5997831, type: 3}
       count: 3
     rate: 1
@@ -1019,13 +1019,74 @@ MonoBehaviour:
     - enemy: {fileID: 2806846580664875793, guid: c417c0cc2e7f2904992e6c0bb5997831, type: 3}
       count: 5
     - enemy: {fileID: 2806846580664875793, guid: 2a859b7f96ef0db4ea2d0ee3b7862c6b, type: 3}
-      count: 3
+      count: 2
+    rate: 1
+  - name: 3
+    enemies:
     - enemy: {fileID: 2806846580664875793, guid: c417c0cc2e7f2904992e6c0bb5997831, type: 3}
-      count: 5
+      count: 2
+    - enemy: {fileID: 2806846580664875793, guid: 2a859b7f96ef0db4ea2d0ee3b7862c6b, type: 3}
+      count: 3
+    - enemy: {fileID: 2806846580664875793, guid: 0122915bc03e41c40bbf49dc9120262b, type: 3}
+      count: 2
+    - enemy: {fileID: 2806846580664875793, guid: c417c0cc2e7f2904992e6c0bb5997831, type: 3}
+      count: 3
+    rate: 1
+  - name: 4
+    enemies:
+    - enemy: {fileID: 2806846580664875793, guid: 2a859b7f96ef0db4ea2d0ee3b7862c6b, type: 3}
+      count: 2
+    - enemy: {fileID: 2806846580664875793, guid: 0122915bc03e41c40bbf49dc9120262b, type: 3}
+      count: 3
+    - enemy: {fileID: 2806846580664875793, guid: 8ec680f7b5bf85346933522733194885, type: 3}
+      count: 1
     - enemy: {fileID: 2806846580664875793, guid: 2a859b7f96ef0db4ea2d0ee3b7862c6b, type: 3}
       count: 2
     rate: 1
-  timeBetweenWaves: 3
+  - name: 5
+    enemies:
+    - enemy: {fileID: 2806846580664875793, guid: c187416f17b46364883824ebcc4f4e0f, type: 3}
+      count: 10
+    rate: 1
+  - name: 6
+    enemies:
+    - enemy: {fileID: 2806846580664875793, guid: 2a859b7f96ef0db4ea2d0ee3b7862c6b, type: 3}
+      count: 2
+    - enemy: {fileID: 2806846580664875793, guid: 0122915bc03e41c40bbf49dc9120262b, type: 3}
+      count: 3
+    - enemy: {fileID: 2806846580664875793, guid: bd3c50fe9b11ccf48844f2d354acb641, type: 3}
+      count: 5
+    - enemy: {fileID: 2806846580664875793, guid: c417c0cc2e7f2904992e6c0bb5997831, type: 3}
+      count: 8
+    - enemy: {fileID: 2806846580664875793, guid: 8ec680f7b5bf85346933522733194885, type: 3}
+      count: 2
+    rate: 1
+  - name: 7
+    enemies:
+    - enemy: {fileID: 2806846580664875793, guid: 59b75147e43b77f42a20974e214bef9d, type: 3}
+      count: 1
+    rate: 1
+  - name: 8
+    enemies:
+    - enemy: {fileID: 2806846580664875793, guid: bd3c50fe9b11ccf48844f2d354acb641, type: 3}
+      count: 5
+    - enemy: {fileID: 2806846580664875793, guid: 8ec680f7b5bf85346933522733194885, type: 3}
+      count: 2
+    - enemy: {fileID: 2806846580664875793, guid: 59b75147e43b77f42a20974e214bef9d, type: 3}
+      count: 1
+    - enemy: {fileID: 2806846580664875793, guid: 2a859b7f96ef0db4ea2d0ee3b7862c6b, type: 3}
+      count: 3
+    - enemy: {fileID: 2806846580664875793, guid: 59b75147e43b77f42a20974e214bef9d, type: 3}
+      count: 1
+    rate: 1
+  - name: 9
+    enemies:
+    - enemy: {fileID: 2806846580664875793, guid: c187416f17b46364883824ebcc4f4e0f, type: 3}
+      count: 20
+    - enemy: {fileID: 2806846580664875793, guid: 59b75147e43b77f42a20974e214bef9d, type: 3}
+      count: 10
+    rate: 1
+  timeBetweenWaves: 5
   waveCountdown: 0
   state: 2
 --- !u!4 &1882183787
@@ -1037,7 +1098,7 @@ Transform:
   m_GameObject: {fileID: 1882183785}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 1.5, z: 5}
+  m_LocalPosition: {x: 7.169, y: 1.9759994, z: 9.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 2599167859785493189}
   - component: {fileID: 2276723836526730708}
   - component: {fileID: -8124013208764223244}
-  - component: {fileID: 1485349894710722142}
+  - component: {fileID: -4378123611241666327}
   m_Layer: 0
-  m_Name: Bloon_Blue
+  m_Name: Bloon_Black
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 695109571651841689}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5, y: 1.5, z: 10}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 5, y: 1, z: 10}
+  m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a997b84f1fc1fea4bac24b8ecbd884cb, type: 2}
+  - {fileID: 2100000, guid: 9cd1889168e94ef448b2e95cbc9333bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -122,12 +122,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f2ec3894d0f8646b9073ae2f838488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7.5
+  speed: 10
   hitPoints: 2
   damage: 0
-  rewardPoints: 25
+  rewardPoints: 7
   alreadyHit: 0
---- !u!114 &1485349894710722142
+--- !u!114 &-4378123611241666327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

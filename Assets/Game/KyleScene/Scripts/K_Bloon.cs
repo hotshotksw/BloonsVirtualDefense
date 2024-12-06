@@ -27,9 +27,10 @@ public class K_Bloon : MonoBehaviour
             Destroy(gameObject);
         }
         Vector3 dir = target.position - transform.position;
+        dir = new Vector3(dir.x, 0, dir.z);
         transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
-        if (Vector3.Distance(transform.position, target.position) < 0.4f)
+        if (Vector2.Distance(new Vector2(transform.position.x, transform.position.z), new Vector2(target.position.x, target.position.z)) < 0.4f)
         {
             GetNextWaypoint();
         }
